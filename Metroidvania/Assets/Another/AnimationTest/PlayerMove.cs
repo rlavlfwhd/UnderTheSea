@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
-{
+{    
     public float moveSpeed = 5f;
     public BoxCollider2D movementArea;
 
@@ -10,11 +10,6 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         playerCollider = GetComponent<CapsuleCollider2D>();
-
-        if (playerCollider == null)
-        {
-            Debug.LogWarning("Player does not have a CapsuleCollider2D! Please add one.");
-        }
     }
 
     void Update()

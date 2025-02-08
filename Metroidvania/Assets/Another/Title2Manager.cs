@@ -7,7 +7,15 @@ public class Title2Manager : MonoBehaviour
 {
     public void NewGameBtnClick()
     {
-        SceneManager.LoadScene("CharacterSelect");
+        SaveSystem.DeleteSave();
+        GameMaster.Instance.StartNewGame();
+        SceneManager.LoadScene("GamePlay");
+    }
+
+    public void LoadGameBtnClick()
+    {
+        GameMaster.Instance.LoadGameData();
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void BackBtnClick()
