@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1080
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36f7ac79fe1a62468056c914bccbff2
+      internalID: -514735936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67b2824d51533b43956e6f3bd5b736e
+      internalID: 1939720311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_2
+      rect:
+        serializedVersion: 2
+        x: 3846
+        y: 1080
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d3282cca7affe4db035e3aba9ff73f
+      internalID: -138686662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7160bc4d6f6fbd349ab8ed826751504f
+      internalID: 872852006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1080
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd550ed62d5a394c99587af7b69e3dd
+      internalID: 2141692006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbee5e6d990e8f4dad662074a083945
+      internalID: -793419724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287340582da4aa24a959f073437cf16a
+      internalID: -175199554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_7
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a51930ae1e9f73488fc497d20054d52
+      internalID: -907363049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca01ac1535e89cc469d10431fe378e53
+      internalID: 1035662046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player (1) Idle Motion_9
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 270
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3d56fb8db30bd4a941ca56b088e362
+      internalID: -929143700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +316,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player (1) Idle Motion_0: -514735936
+      Player (1) Idle Motion_1: 1939720311
+      Player (1) Idle Motion_2: -138686662
+      Player (1) Idle Motion_3: 872852006
+      Player (1) Idle Motion_4: 2141692006
+      Player (1) Idle Motion_5: -793419724
+      Player (1) Idle Motion_6: -175199554
+      Player (1) Idle Motion_7: -907363049
+      Player (1) Idle Motion_8: 1035662046
+      Player (1) Idle Motion_9: -929143700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

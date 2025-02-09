@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\uCCB4\uB825\uBC142_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 580
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af22bc292cd03142989d58818208c0c
+      internalID: 1673678138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uCCB4\uB825\uBC142_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 574
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757047cb7aed1e1488c88685b308a318
+      internalID: 1867306623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uCCB4\uB825\uBC142_2"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 580
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b1c417d9cfce744870813674303baa
+      internalID: -1870845942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +169,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\uCCB4\uB825\uBC142_0": 1673678138
+      "\uCCB4\uB825\uBC142_1": 1867306623
+      "\uCCB4\uB825\uBC142_2": -1870845942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

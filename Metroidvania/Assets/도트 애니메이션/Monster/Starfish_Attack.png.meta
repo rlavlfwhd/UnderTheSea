@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8239e8f1973905c4b99a512a1f93353b
+guid: f982aea067c5dee4c9817b595fc3b3a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player (1) Kick Attack 1_0
+      name: Starfish_Attack_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 1703
-        width: 270
-        height: 365
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10fccd57b5f90ab4f9dc124331fea907
-      internalID: 1799745758
+      spriteID: f2ef823a4a5c92f4b9dedeae170f9889
+      internalID: 1116784369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player (1) Kick Attack 1_1
+      name: Starfish_Attack_1
       rect:
         serializedVersion: 2
-        x: 2097
-        y: 1693
-        width: 270
-        height: 365
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b58e5fb817492f540b4d5e086b00f583
-      internalID: 1664516440
+      spriteID: 7dd8df7c01b711e41ade6e655e8704c7
+      internalID: -391624605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player (1) Kick Attack 1_2
+      name: Starfish_Attack_2
       rect:
         serializedVersion: 2
-        x: 4015
-        y: 1703
-        width: 270
-        height: 365
+        x: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2a2b8a7884748e4f8bd1e48909d8557
-      internalID: -108281306
+      spriteID: 581f51bef39de4441a708649a6792977
+      internalID: -1022721551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player (1) Kick Attack 1_3
+      name: Starfish_Attack_3
       rect:
         serializedVersion: 2
-        x: 5931
-        y: 1700
-        width: 270
-        height: 365
+        x: 384
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c06453c2e59104449a5cf9729595d25
-      internalID: 1703188377
+      spriteID: 02341a498bcd4e44ab650503e6d33ea2
+      internalID: -1216908812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player (1) Kick Attack 1_4
+      name: Starfish_Attack_4
       rect:
         serializedVersion: 2
-        x: 7843
-        y: 1703
-        width: 270
-        height: 365
+        x: 512
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc84777d7650a64791de96397490976
-      internalID: -324056078
+      spriteID: 93b2fec5f5015fb4b9634e9f4f42a385
+      internalID: 679151649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player (1) Kick Attack 1_5
+      name: Starfish_Attack_5
       rect:
         serializedVersion: 2
-        x: 175
-        y: 623
-        width: 270
-        height: 365
+        x: 640
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,71 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6d133951ef4a8d4b985574212ea2a44
-      internalID: 1432266390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player (1) Kick Attack 1_6
-      rect:
-        serializedVersion: 2
-        x: 2093
-        y: 625
-        width: 270
-        height: 365
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d95dec82ad5532447ada33cefe744c84
-      internalID: 1747762959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player (1) Kick Attack 1_7
-      rect:
-        serializedVersion: 2
-        x: 4019
-        y: 619
-        width: 270
-        height: 365
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0e490abde07ba245b4a68cedbcdd67c
-      internalID: -1259269853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player (1) Kick Attack 1_8
-      rect:
-        serializedVersion: 2
-        x: 5815
-        y: 621
-        width: 270
-        height: 365
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77c290e0222cfa141a7c98865e367d95
-      internalID: -770449983
+      spriteID: 130f1d9e98db9be4596a8ebb7115552b
+      internalID: 763509546
       vertices: []
       indices: 
       edges: []
@@ -296,15 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player (1) Kick Attack 1_0: 1799745758
-      Player (1) Kick Attack 1_1: 1664516440
-      Player (1) Kick Attack 1_2: -108281306
-      Player (1) Kick Attack 1_3: 1703188377
-      Player (1) Kick Attack 1_4: -324056078
-      Player (1) Kick Attack 1_5: 1432266390
-      Player (1) Kick Attack 1_6: 1747762959
-      Player (1) Kick Attack 1_7: -1259269853
-      Player (1) Kick Attack 1_8: -770449983
+      Starfish_Attack_0: 1116784369
+      Starfish_Attack_1: -391624605
+      Starfish_Attack_2: -1022721551
+      Starfish_Attack_3: -1216908812
+      Starfish_Attack_4: 679151649
+      Starfish_Attack_5: 763509546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
