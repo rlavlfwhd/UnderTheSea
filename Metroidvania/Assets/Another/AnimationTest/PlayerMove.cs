@@ -1,54 +1,64 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
-{    
+{
     public float moveSpeed = 5f;
-    public BoxCollider2D movementArea;
+    public float minY = -2f;
+    public float maxY = 2f;
 
-    private CapsuleCollider2D playerCollider;
+    private bool m_FacingRight = true;
+    Animator animator;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+    private float moveX;
 
     void Start()
     {
-        playerCollider = GetComponent<CapsuleCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
+        rb.freezeRotation = true;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        MovePlayer();
+        moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");        
+
+        movement = new Vector2(moveX, moveY).normalized * moveSpeed;
+
+        float speed = (moveX != 0 || moveY != 0) ? 1.0f : 0.0f;
+        animator.SetFloat("Speed", speed);
     }
 
-    private void MovePlayer()
+    void FixedUpdate()
     {
-        if (playerCollider == null)
+        if (moveX > 0 && !m_FacingRight) //입력이 오른쪽, 플레이어가 왼쪽 보고 있다면
         {
-            return;
+            Flip();                                         //플레이어를 뒤집는다.
         }
-                
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        else if (moveX < 0 && m_FacingRight)
+        {
+            Flip();
+        }
+        // 이동 적용
+        rb.velocity = new Vector2(movement.x, movement.y);
 
-        Vector3 move = new Vector3(horizontal, vertical, 0) * moveSpeed * Time.deltaTime;
-        transform.Translate(move);
-                
-        RestrictMovementToBounds();
+        // Y축 이동 범위 제한
+        float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
+        transform.position = new Vector2(transform.position.x, clampedY);
     }
 
-    private void RestrictMovementToBounds()
+    private void Flip()                             //플립 함수를 호출 하여 방향 전환
     {
-        Vector3 position = transform.position;
-
-        float playerWidth = playerCollider.bounds.size.x;
-        float playerHeight = playerCollider.bounds.size.y;
-
-        float minX = movementArea.bounds.min.x + playerWidth / 2;
-        float maxX = movementArea.bounds.max.x - playerWidth / 2;
-
-        float minY = movementArea.bounds.min.y + playerHeight / 2;
-        float maxY = movementArea.bounds.max.y - playerHeight / 2; 
-
-        position.x = Mathf.Clamp(position.x, minX, maxX);
-        position.y = Mathf.Clamp(position.y, minY, maxY);
-
-        transform.position = position;
+        m_FacingRight = !m_FacingRight;             //플레이어가 바라보는 방향을 전환
+        Vector3 theScale = transform.localScale;    //플레이어의 x 로컬 스케일을 -1로 곱해서 뒤집어 준다.
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
+    
 }
+

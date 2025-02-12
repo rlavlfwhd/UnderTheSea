@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
-{    
+public class PlayerInfo : MonoBehaviour, IDamage
+{
+    public Image PlayerHealth;
     private float autoSaveInterval = 1f;    
 
     void Start()
@@ -16,15 +18,18 @@ public class PlayerController : MonoBehaviour
     {
         DPlayer data = GameMaster.Instance.gameData.dPlayer;
 
-        transform.position = data.position;        
+        transform.position = data.pPos;        
 
-        Debug.Log($"시간 {data.playTime}. 체력: {data.currentHealth}");
+        Debug.Log($"시간 {data.playTime}. 체력: {data.pHP}");
     }
     
     void Update()
     {
-        GameMaster.Instance.gameData.dPlayer.position = transform.position;
-        GameMaster.Instance.gameData.dPlayer.playTime = Time.deltaTime;
+        DPlayer data = GameMaster.Instance.gameData.dPlayer;
+        PlayerHealth.fillAmount = data.pHP / data.pMHP;
+
+        GameMaster.Instance.gameData.dPlayer.pPos = transform.position;
+        GameMaster.Instance.gameData.dPlayer.playTime = Time.deltaTime;        
     }
 
     void OnApplicationQuit()
@@ -44,22 +49,27 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         DPlayer data = GameMaster.Instance.gameData.dPlayer;
-        if (data.currentHealth > 0) data.currentHealth = 0;
+        data.pHP -= damage;
+        if (data.pHP <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
 
         GameMaster.Instance.SaveGameData();
 
-        Debug.Log($"체력 감소: {data.currentHealth}");
+        Debug.Log($"체력 감소: {data.pHP}");
     }
 
     public void Heal(float healAmount)
     {
         DPlayer data = GameMaster.Instance.gameData.dPlayer;
 
-        data.currentHealth += healAmount;
-        if (data.currentHealth > data.maxHealth) data.currentHealth = data.maxHealth;
+        data.pHP += healAmount;
+        if (data.pHP > data.pMHP) data.pHP = data.pMHP;
 
         GameMaster.Instance.SaveGameData();
         
-        Debug.Log($"회복: {data.currentHealth}");
+        Debug.Log($"회복: {data.pHP}");
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class DPlayer
 {
-    public float maxHealth;
-    public float currentHealth;
-    public Vector3 position;
+    public float pMHP;
+    public float pHP;
+    public Vector2 pPos;
     public float playTime;
 }

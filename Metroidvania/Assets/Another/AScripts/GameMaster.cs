@@ -33,9 +33,9 @@ public class GameMaster : MonoBehaviour
         gameData.isStoryWatched = true;
         gameData.dPlayer = new DPlayer
         {
-            maxHealth = 100f,
-            currentHealth = 100f,
-            position = new Vector3(0, 0, 0),
+            pMHP = 100f,
+            pHP = 100f,
+            pPos = new Vector2(0, 0),
             playTime = 0f
         };
     }

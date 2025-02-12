@@ -5,16 +5,24 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform player;
-    public Vector3 nextMapPosition;
-    public BoxCollider2D mapBoundary;
+    public Vector2 Line;
 
+    void Start()
+    {
+        
+    }
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
+
         float playerPositionX = player.position.x;
 
-        if (playerPositionX > mapBoundary.bounds.max.x)
+        if (playerPositionX >= 9.5f)
         {
-            transform.position = nextMapPosition;
-        }
+            player.position = new Vector2(0, -1.8f);
+        }        
     }
 }
