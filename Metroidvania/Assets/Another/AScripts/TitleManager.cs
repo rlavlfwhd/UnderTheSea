@@ -6,11 +6,19 @@ using UnityEngine.SceneManagement;
 public class TitleManager : MonoBehaviour
 {
     public GameObject optionPanel;
-    
 
-    public void StartBtnClick()
+
+    public void NewGameBtnClick()
     {
-        SceneManager.LoadScene("Title2");
+        SaveSystem.DeleteSave();
+        GameMaster.Instance.StartNewGame();
+        SceneManager.LoadScene("GamePlay");
+    }
+
+    public void LoadGameBtnClick()
+    {
+        GameMaster.Instance.LoadGameData();
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void OptionBtnClick()

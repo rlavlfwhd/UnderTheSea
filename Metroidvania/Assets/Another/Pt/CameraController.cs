@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform player;
-    public Vector2 Line;
+    public Transform player;    
 
     void Start()
     {
