@@ -18,7 +18,7 @@ public class PlayerInfo : MonoBehaviour, IDamage
     {
         DPlayer data = GameMaster.Instance.gameData.dPlayer;
 
-        transform.position = data.pPos;
+        transform.position = data.pPos;        
 
         Debug.Log($"시간 {data.playTime}. 체력: {data.pHP}");
     }
@@ -50,7 +50,7 @@ public class PlayerInfo : MonoBehaviour, IDamage
     {
         DPlayer data = GameMaster.Instance.gameData.dPlayer;
         data.pHP -= damage;
-        if (PlayerHealth.fillAmount == 0f)
+        if (data.pHP <= 0)
         {
             Destroy(this.gameObject);
         }

@@ -4,7 +4,6 @@ public class PlayerAttack : MonoBehaviour
 {
     public float attackRange = 1f;
     public LayerMask enemyLayer;
-    private Rigidbody2D rb;
 
 
     Animator animator;    
@@ -15,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -56,7 +54,6 @@ public class PlayerAttack : MonoBehaviour
         
         attackCombo = (attackCombo + 1) % 3;
         KickDamage(attackCombo);
-        rb.velocity = Vector2.zero;
     }
 
     void KickDamage(int comboIndex)

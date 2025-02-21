@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class EnemyInfo : MonoBehaviour, IDamage
 {
-    Animator animator;
     public float eMHP = 50f;
     public float eHP;
-
-    public bool isDead = false;
     
     void Start()
     {
@@ -38,13 +35,12 @@ public class EnemyInfo : MonoBehaviour, IDamage
 
         if(eHP <= 0)
         {
-            animator.SetTrigger("isDead");
+            Destroy(this.gameObject);
         }
 
         SaveEnemyData();
-    }    
-
-
+    }
+    
 
     void SaveEnemyData()
     {
@@ -61,5 +57,6 @@ public class EnemyInfo : MonoBehaviour, IDamage
 
         GameMaster.Instance.gameData.enemies.Add(new DEnemy(transform.position, eHP));
         GameMaster.Instance.SaveGameData();
-    }    
+    }
+    
 }
