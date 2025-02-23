@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c62c213b739b1454ebf3455946e9ade7
+guid: 4a288e0d45ebb064a92b3c726f00fb62
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Squid_Idle_0
+      name: Squid_Run_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bbec1b7fd20fdf42985534acbed27ea
-      internalID: 1218490331
+      spriteID: 8df4e665a26c37440bc23466812f980d
+      internalID: -1677220278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squid_Idle_1
+      name: Squid_Run_1
       rect:
         serializedVersion: 2
         x: 64
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a7d0e50f9ef2404b9f10c371f328416
-      internalID: -1744034904
+      spriteID: 9fb1f49e6481f414d96b721fdf15f015
+      internalID: -2046410321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squid_Idle_2
+      name: Squid_Run_2
       rect:
         serializedVersion: 2
         x: 128
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7c6375c6fa77534d8e7e74ee492645a
-      internalID: 1561659670
+      spriteID: 64f80651786420a4ea7834d8ae9bd34c
+      internalID: -1231317003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squid_Idle_3
+      name: Squid_Run_3
       rect:
         serializedVersion: 2
         x: 192
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe048a8d877d5c1478cfa0ce61beb00c
-      internalID: -940612050
+      spriteID: 79df645d3ee2acc419c0c957ea70f93a
+      internalID: 157037131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Squid_Idle_4
+      name: Squid_Run_4
       rect:
         serializedVersion: 2
         x: 256
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fc3afbcc4dda164885083c6d8c7fda0
-      internalID: 545610428
+      spriteID: 2cef61d4b6ee8394bba89ebe81ff0e6b
+      internalID: 1976338454
       vertices: []
       indices: 
       edges: []
@@ -212,11 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Squid_Idle_0: 1218490331
-      Squid_Idle_1: -1744034904
-      Squid_Idle_2: 1561659670
-      Squid_Idle_3: -940612050
-      Squid_Idle_4: 545610428
+      Squid_Run_0: -1677220278
+      Squid_Run_1: -2046410321
+      Squid_Run_2: -1231317003
+      Squid_Run_3: 157037131
+      Squid_Run_4: 1976338454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
