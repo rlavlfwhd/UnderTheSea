@@ -1,19 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
     public float attackRange = 1f;
     public LayerMask enemyLayer;
-
-
+    private Rigidbody2D rb;
     Animator animator;    
     int attackCombo = 0;        
     float comboResetTime = 1f;
     float comboTimer = 0f;
+    private static readonly int[] KickDamages = { 15, 15, 30 };
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -24,7 +27,14 @@ public class PlayerAttack : MonoBehaviour
             comboTimer = 0f;
         }
 
-        if (comboTimer < comboResetTime)
+
+        if(attackCombo > 0 && comboTimer >= comboResetTime)
+        {
+            ResetAttackCombo();
+        }
+        comboTimer += Time.deltaTime;
+
+        /*if (comboTimer < comboResetTime)
         {
             comboTimer += Time.deltaTime;
         }
@@ -34,12 +44,16 @@ public class PlayerAttack : MonoBehaviour
             {
                 ResetAttackCombo();
             }
-        }
+        }*/
     }
 
     void Kick()
     {
-        if (attackCombo == 0)
+        animator.SetTrigger($"Kick{attackCombo + 1}");
+        DealDamage();
+        attackCombo = (attackCombo + 1) % 3;
+        rb.velocity = Vector2.zero;
+        /*if (attackCombo == 0)
         {
             animator.SetTrigger("Kick1");
         }
@@ -50,13 +64,20 @@ public class PlayerAttack : MonoBehaviour
         else if (attackCombo == 2)
         {
             animator.SetTrigger("Kick3");
-        }
-        
-        attackCombo = (attackCombo + 1) % 3;
-        KickDamage(attackCombo);
+        }*/
+                
+        //KickDamage(attackCombo);        
     }
 
-    void KickDamage(int comboIndex)
+    void DealDamage()
+    {
+        Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
+        foreach(var obj in hitObjects)
+        {
+            obj.GetComponent<IDamage>()?.TakeDamage(KickDamages[attackCombo]);
+        }
+    }
+    /*void KickDamage(int comboIndex)
     {
         int[] kickDamages = { 15, 15, 30 }; // 1타: 15, 2타: 15, 3타: 30
         int damage = kickDamages[comboIndex]; // 현재 콤보에 해당하는 데미지 적용
@@ -71,7 +92,7 @@ public class PlayerAttack : MonoBehaviour
                 damageable.TakeDamage(damage); // 해당 공격 콤보의 데미지를 적용
             }
         }
-    }
+    }*/
 
 
     void ResetAttackCombo()

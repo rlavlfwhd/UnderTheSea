@@ -6,30 +6,23 @@ using UnityEngine.UI;
 public class PlayerInfo : MonoBehaviour, IDamage
 {
     public Image PlayerHealth;
-    private float autoSaveInterval = 1f;    
+    private float autoSaveInterval = 1f;
+    
+    private DPlayer data;
 
     void Start()
     {
-        LoadPlayerData();
+        data = GameMaster.Instance.gameData.dPlayer;
+        transform.position = data.pPos;
         StartCoroutine(AutoSaveRoutine());
-    }
-
-    void LoadPlayerData()
-    {
-        DPlayer data = GameMaster.Instance.gameData.dPlayer;
-
-        transform.position = data.pPos;        
-
-        Debug.Log($"시간 {data.playTime}. 체력: {data.pHP}");
-    }
+    }        
     
     void Update()
-    {
-        DPlayer data = GameMaster.Instance.gameData.dPlayer;
+    {        
         PlayerHealth.fillAmount = data.pHP / data.pMHP;
 
-        GameMaster.Instance.gameData.dPlayer.pPos = transform.position;
-        GameMaster.Instance.gameData.dPlayer.playTime = Time.deltaTime;        
+        data.pPos = transform.position;
+        data.playTime += Time.deltaTime;
     }
 
     void OnApplicationQuit()
@@ -47,28 +40,19 @@ public class PlayerInfo : MonoBehaviour, IDamage
     }
 
     public void TakeDamage(float damage)
-    {
-        DPlayer data = GameMaster.Instance.gameData.dPlayer;
+    {        
         data.pHP -= damage;
-        if (data.pHP <= 0)
+        if (PlayerHealth.fillAmount == 0)
         {
             Destroy(this.gameObject);
-        }
-
-
-        GameMaster.Instance.SaveGameData();
+        }        
 
         Debug.Log($"체력 감소: {data.pHP}");
     }
 
     public void Heal(float healAmount)
     {
-        DPlayer data = GameMaster.Instance.gameData.dPlayer;
-
-        data.pHP += healAmount;
-        if (data.pHP > data.pMHP) data.pHP = data.pMHP;
-
-        GameMaster.Instance.SaveGameData();
+        data.pHP = Mathf.Min(data.pHP + healAmount, data.pMHP);
         
         Debug.Log($"회복: {data.pHP}");
     }
